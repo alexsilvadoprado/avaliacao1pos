@@ -1,6 +1,6 @@
 # Primeira avaliação da Disciplina de Plataformas Híbridas
 
-# Construir a interface de um aplicativo seguindo as seguintes regras:
+**Construir a interface de um aplicativo seguindo as seguintes regras:**
 
 - usar HTML, CSS(pode usar flexbox e/ou gridlayout) e Javascript
 - não pode usar nenhum framework para construção da UI
