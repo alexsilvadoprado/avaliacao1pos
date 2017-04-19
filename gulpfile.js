@@ -5,7 +5,7 @@ var connect = require('gulp-connect');
 
 gulp.task('src', () => {
     gulp.src('./src/javascript/**/*.js')
-        .pipe(gulp.dest('www/assets/js'));
+        .pipe(gulp.dest('./www/assets/js'));
 
     gulp.src('./src/html/**/*.html')
         .pipe(gulp.dest('www'));
