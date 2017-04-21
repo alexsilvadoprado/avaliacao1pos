@@ -16,6 +16,24 @@
 @boxShadowActive: inset 0 1px 1px rgba(0,0,0,.075), 0 0 0.2em rgba(60,179,113, 0.6);
 @boxShadowDanger: inset 0 1px 1px rgba(0,0,0,.075), 0 0 0.2em rgba(255,0,0, 0.6);
 
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
 @baseFontDir: '../third/fonts/Ubuntu';
 
 * {
@@ -73,12 +91,7 @@ div.container {
 	width: 100vw;
 	height: 100vh;
 	display: flex;
-	flex-direction: row;
-}
-
-// Conteiner de Apresentação
-#welcome-container {
-	flex-direction: column !important;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 }
@@ -108,8 +121,10 @@ a.button-raised {
 	font-weight: bold;
 }
 
-.form-input {
-	border: 0px solid;
-	border-radius: 3px;
-	font-size: 14px;
+// Botão shake
+.button-shake {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
